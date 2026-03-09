@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+article > *:not(.entry-content),
+.entry-content > * {
+    @apply mx-auto;
+}
+
+/* Custom Logo Styles */
+.custom-logo-link {
+    display: inline-block;
+}
+
+.custom-logo-link img {
+    max-height: 60px;
+    width: auto;
+}
+
+.entry-content, .block-editor-block-list__layout {
+    h1 {
+        @apply text-2xl;
+    }
+
+    h2 {
+        @apply text-xl;
+    }
+
+    h3 {
+        @apply text-lg;
+    }
+
+    p, ul, ol {
+        a {
+            @apply text-blue-500 underline;
+
+            &:hover {
+                @apply no-underline;
+            }
+        }
+
+        @apply mb-8;
+    }
+
+    ul:not(.block-editor-block-variation-picker__variations) {
+        li {
+            @apply list-disc list-inside;
+        }
+    }
+
+    ol {
+        li {
+            @apply list-decimal list-inside;
+        }
+    }
+}
+
+/* Font utility classes */
+.font-manrope {
+    font-family: 'Manrope', sans-serif;
+}
+
+.font-opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+/* HERO START */
+@keyframes logoMarquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.logo-marquee-track {
+    display: flex;
+    animation: logoMarquee 20s linear infinite;
+    will-change: transform;
+    width: max-content;
+    gap: 4rem;
+}
+
+.logo-marquee-group {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo-marquee-group img {
+    margin: 0;
+    padding: 0;
+}
+
+.logo-marquee-fade {
+    position: relative;
+}
+
+.logo-marquee-fade::before,
+.logo-marquee-fade::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.logo-marquee-fade::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(10, 38, 64, 1), rgba(10, 38, 64, 0));
+}
+
+.logo-marquee-fade::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(10, 38, 64, 1), rgba(10, 38, 64, 0));
+}
+        @media (prefers-reduced-motion: reduce) {
+    .logo-marquee-track {
+        animation: none;
+    }
+}
+         .carousel-container {
+    transition: opacity 0.3s ease-in-out;
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+        .accordion-content.active {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
+        }
+
+        .rotate-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .rotate-icon.active {
+            transform: rotate(180deg);
+        }
+        
+        /* Counter Anti-Jerk CSS */
+.counter-number {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1, "lnum" 1;
+    display: inline-block;
+    text-align: left;
+    white-space: nowrap;
+}
+
