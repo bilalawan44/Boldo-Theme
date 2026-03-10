@@ -115,10 +115,10 @@ $section_id = 'hero-' . get_the_ID();
     </svg>
 
     <!-- Hero Content -->
-    <div class="max-w-[1220px] mx-auto px-5 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-[70px] pt-24 sm:pt-32 md:pt-40 lg:pt-[162px]">
+    <div class="max-w-[1220px] mx-auto px-5 lg:px-[10px] relative z-10 lg:flex gap-8 md:gap-12 lg:gap-5 xl:gap-[139px] pt-24 sm:pt-32 md:pt-40 lg:pt-[162px]">
 
         <!-- Left Content -->
-        <div class="max-w-full lg:max-w-[567px] pt-0 md:pt-8 lg:pt-[58px]">
+        <div class="max-w-full lg:max-w-[567px] pt-0 md:pt-8 lg:pt-1 xl:pt-[58px] lg:pr-2">
 
             <?php if ($heading) : ?>
                 <h1 class="hero-heading font-manrope font-normal text-3xl sm:text-4xl md:text-[42px] lg:text-5xl leading-tight sm:leading-snug md:leading-[60px] lg:leading-[72px]">
@@ -153,7 +153,7 @@ $section_id = 'hero-' . get_the_ID();
         </div>
 
         <!-- Right Content -->
-        <div class="max-w-full relative sm:max-w-[450px] md:max-w-[400px] lg:max-w-[493px] left-0 xl:left-[70px] mx-auto lg:mx-0 mt-8 lg:mt-0">
+        <div class="max-w-full sm:max-w-[450px] md:max-w-[400px] lg:max-w-[494px] mt-8 lg:mt-0">
 
             <?php if ($hero_image) : ?>
                 <img src="<?php echo esc_url($hero_image['url']); ?>"
